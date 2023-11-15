@@ -1,5 +1,5 @@
 
-//% weight=100 color=#1abc9c icon="\uf0b2" block="lark (EDU0157)"
+//% weight=100 color=#1abc9c icon="\uf0b2" block="lark"
 namespace lark {
 
     export enum ValueDataType {
@@ -40,6 +40,7 @@ namespace lark {
     //% hour.min=0 hour.max=59 hour.defl=11
     //% min.min=0 min.max=59 min.defl=0
     //% sec.min=0 sec.max=59 sec.defl=0
+    //% inlineInputMode=inline
     //% weight=80
     export function setTime(year: number, month: number, day: number, hour: number, min: number, sec: number): void {
 
@@ -64,13 +65,13 @@ namespace lark {
     }
 
     //% block="get lark module %type unit" 
-    //% weight=30
+    //% weight=40
     export function getUnit(type: UintDataType): string {
         return ""
     }
 
     //% block="get lark module %str value (String)" 
-    //% weight=40
+    //% weight=30
     export function getValueString1(str: string): string {
         return ""
     }
