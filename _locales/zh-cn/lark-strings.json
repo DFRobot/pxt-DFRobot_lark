@@ -10,12 +10,12 @@
     "lark.getUnitString1|block": "获取云雀 %str 单位",
     "lark.ValueDataType.Speed|block": "风速",
     "lark.ValueDataType.Direction|block": "风向",
-    "lark.ValueDataType.Temp|block": "湿度",
-    "lark.ValueDataType.Humi|block": "温度",
+    "lark.ValueDataType.Temp|block": "温度",
+    "lark.ValueDataType.Humi|block": "湿度",
     "lark.ValueDataType.Pressure|block": "气压",
     "lark.UintDataType.Speed|block": "风速",
-    "lark.UintDataType.Temp|block": "湿度",
-    "lark.UintDataType.Humi|block": "温度",
+    "lark.UintDataType.Temp|block": "温度",
+    "lark.UintDataType.Humi|block": "湿度",
     "lark.UintDataType.Pressure|block": "气压",
     "lark|block": "云雀"
 }

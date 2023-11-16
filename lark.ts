@@ -27,7 +27,7 @@ namespace lark {
     }
 
 
-    const DEBUG                     = true      ///<Debugging information
+    const DEBUG                     = false      ///<Debugging information
 
     const CMD_GET_DATA              = 0x00      ///< Return the name based on the given name
     const CMD_GET_ALL_DATA          = 0x01      ///< Get all onboard sensor data
@@ -228,20 +228,24 @@ namespace lark {
         }
     }
 
-    function recvData(len: number): Buffer {
+    function recvData(length: number): Buffer {
 
         let remain = length;
-        let buf;
+        let buf: Buffer = pins.createBuffer(0);
         while(remain){
             length = (remain > IIC_MAX_TRANSFER) ? IIC_MAX_TRANSFER : remain;
             if (remain > IIC_MAX_TRANSFER) {
-                buf = pins.i2cReadBuffer(address, length);
+                buf = buf.concat(pins.i2cReadBuffer(address, length));
             } else {
-                pins.i2cReadBuffer(address, length);
+                buf = buf.concat(pins.i2cReadBuffer(address, length));
             }
             remain = remain - length;
         }
         return buf;
+    }
+
+    function recvFlush(): void {
+        recvData(10);
     }
     
 
@@ -257,7 +261,12 @@ namespace lark {
         let data: Buffer;
         let length = 0;
         let t = control.millis();
-        recvPkt = { status: 0, cmd: 0, lenL: 0, lenH: 0, buf: [] };
+        // recvPkt = { status: 0, cmd: 0, lenL: 0, lenH: 0, buf: [] };
+        recvPkt.status = 0;
+        recvPkt.cmd = 0;
+        recvPkt.lenL = 0;
+        recvPkt.lenH = 0;
+        recvPkt.buf = [];
         while (control.millis() - t < timeout) {
             recvPkt.status = recvData(1)[0];
             switch(recvPkt.status){
@@ -266,7 +275,7 @@ namespace lark {
                 {
                     recvPkt.cmd = recvData(1)[0];
                     if (recvPkt.cmd != cmd) {
-                        // recvFlush();
+                        recvFlush();
                         errorCode = ERR_CODE_RES_PKT; //Response packet error
                         if (DEBUG) {
                             serial.writeLine("Response pkt is error!")

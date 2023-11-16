@@ -1,1 +1,12 @@
-//
+// lark.initDevice()
+// lark.setTime(2023, 12, 8, 11, 0, 0)
+// basic.forever(function () {
+//     serial.writeLine("time:" + lark.getTime())
+//     serial.writeLine("speed:" + lark.getValueString(lark.ValueDataType.Speed) + lark.getUnitString(lark.UintDataType.Speed))
+//     serial.writeLine("direction:" + lark.getValueString(lark.ValueDataType.Direction))
+//     serial.writeLine("temp:" + lark.getValueFloat(lark.UintDataType.Temp) + lark.getUnitString(lark.UintDataType.Temp))
+//     serial.writeLine("humi:" + lark.getValueString1("Humi") + lark.getUnitString1("Humi"))
+//     serial.writeLine("pressure:" + lark.getValueFloat1("Pressure") + lark.getUnitString1("Pressure"))
+//     serial.writeLine("---------------------------------------------------------------")
+//     basic.pause(1000)
+// })

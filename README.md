@@ -6,7 +6,6 @@
 
 ## Basic usage
 
-
 ## License
 
 MIT
