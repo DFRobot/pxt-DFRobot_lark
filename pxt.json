@@ -7,8 +7,6 @@
         "core": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "README.md",
         "lark.ts",
         "_locales/zh-cn/lark-strings.json",
@@ -24,5 +22,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }

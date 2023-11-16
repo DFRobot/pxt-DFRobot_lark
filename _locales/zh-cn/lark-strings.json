@@ -17,5 +17,6 @@
     "lark.UintDataType.Temp|block": "温度",
     "lark.UintDataType.Humi|block": "湿度",
     "lark.UintDataType.Pressure|block": "气压",
-    "lark|block": "云雀"
+    "lark|block": "云雀",
+    "{id:category}lark": "云雀"
 }
