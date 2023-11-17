@@ -1,5 +1,5 @@
 
-//% weight=100 color=#1abc9c icon="\uf0b2" block="lark"
+//% weight=100 color=#1abc9c icon="\uf0b2" block="Lark"
 namespace lark {
 
     export enum ValueDataType {

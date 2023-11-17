@@ -1,5 +1,5 @@
 {
-    "name": "lark",
+    "name": "Lark",
     "version": "0.0.2",
     "description": "",
     "license": "MIT",
@@ -9,8 +9,8 @@
     "files": [
         "README.md",
         "lark.ts",
-        "_locales/zh-cn/lark-strings.json",
-        "_locales/zh-cn/lark-jsdoc-strings.json"
+        "_locales/zh-cn/Lark-strings.json",
+        "_locales/zh-cn/Lark-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
